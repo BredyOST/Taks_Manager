@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-
+    @import url('https://fonts.googleapis.com/css2?family=Roboto,wght@0,400;0,500;0,700&family=Tinos,wght@0,400;0,700;1,400;1,700&display=swap');
+    
     html {
         box-sizing: border-box;
     }
@@ -39,14 +40,14 @@ export const GlobalStyles = createGlobalStyle`
     html,
     body {
         height: 100%;
-        // min-width: $minWidth + px;
+        min-width: $minWidth + px;
     }
 
     body {
         //colorlor:  globalIndex.$Theme_main_text_color;
         line-height: 1;
-        font-family:  font-familyglobalIndex.$main_font_family;
-        font-size:  rem(globalIndex.$main_font_size);
+        //font-family:  font-familyglobalIndex.$main_font_family;
+        //font-size:  rem(globalIndex.$main_font_size);
         //font-weight: globalIndex.$main_font_weight;
 
         // text-rendering: optimizeLegibility;

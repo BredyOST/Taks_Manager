@@ -5,7 +5,7 @@ import buildRules from './config/eslint/buildRules.js';
 
 export default [
     {
-        ignores: ['node_modules/**'],
+        ignores: ['node_modules/**', 'src/dist/**'],
     },
     {
         files: buildFiles(),

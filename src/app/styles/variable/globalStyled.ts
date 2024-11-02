@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { adaptiveValue, rem } from '../common';
-import {CONTAINER_PADDING, CONTAINER_WIDTH, MIN_WIDTH} from './globalConstant';
+import { CONTAINER_PADDING, CONTAINER_WIDTH, MIN_WIDTH } from './globalConstant';
 
 export const ContainerDiv = styled.div`
     max-width: ${rem(CONTAINER_WIDTH)};
