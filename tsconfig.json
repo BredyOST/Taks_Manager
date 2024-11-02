@@ -11,9 +11,7 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": "."
     },
-    "include": ["src/**/*",
-        "webpack.config"
-    ],
+    "include": ["src/**/*", "webpack.config"],
     "exclude": ["node_modules"],
     "ts-node": {
         "compilerOptions": {

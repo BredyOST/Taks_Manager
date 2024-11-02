@@ -1,14 +1,12 @@
-import prettierConfig from "eslint-config-prettier";
+import prettierConfig from 'eslint-config-prettier';
 
-function buildRules()
-{
+function buildRules() {
     return {
-        ...prettierConfig.rules,
-        "prettier/prettier": "error",
-        "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "eqeqeq": "error",
-    }
+        'prettier/prettier': 'error',
+        '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        eqeqeq: 'error',
+    };
 }
 
 export default buildRules;

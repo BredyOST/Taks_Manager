@@ -6,7 +6,7 @@ export interface BuildPath {
     html: string;
 }
 
-export const PORT_BASIC= 3000;
+export const PORT_BASIC = 3000;
 
 export interface BuildOptions {
     mode: BuildMode;
