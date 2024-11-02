@@ -1,10 +1,9 @@
-import type {Configuration} from 'webpack-dev-server'
+import type { Configuration } from 'webpack-dev-server';
 
-function buildDevServer(port:number):Configuration {
-    console.log(port)
+function buildDevServer(port: number): Configuration {
     return {
         port: port,
-        open: true
-    }
+        open: true,
+    };
 }
 export default buildDevServer;

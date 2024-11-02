@@ -1,12 +1,10 @@
-
-
-function App () {
+function App() {
     return (
         <>
             <div>sss</div>
-                    <div>sdds</div>
+            <div>sdds</div>
         </>
-    )
+    );
 }
 
-export default App
+export default App;

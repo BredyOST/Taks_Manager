@@ -1,6 +1,8 @@
+
 function buildFiles() {
     return [
-        ["**/*.ts", "**/*.tsx"],
+        "**/*.ts",
+        "**/*.tsx",
     ]
 }
 

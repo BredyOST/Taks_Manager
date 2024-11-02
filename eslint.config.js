@@ -1,7 +1,7 @@
-import buildPlugins from "./config/eslint/buildPlugins";
-import buildFiles from "./config/eslint/buildFiles";
-import buildLanguageOptions from "./config/eslint/buildLanguageOptions";
-import buildRules from "./config/eslint/buildRules";
+import buildPlugins from "./config/eslint/buildPlugins.js";
+import buildFiles from "./config/eslint/buildFiles.js";
+import buildLanguageOptions from "./config/eslint/buildLanguageOptions.js";
+import buildRules from "./config/eslint/buildRules.js";
 
 export default [
   {
