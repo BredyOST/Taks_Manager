@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         border: 0;
     }
-
+    
     a {
         color: inherit;
         text-decoration: none;
