@@ -9,7 +9,6 @@
         "eslint": "eslint .",
         "prettier": "prettier --write ."
     },
-
     "keywords": [],
     "author": "",
     "license": "ISC",

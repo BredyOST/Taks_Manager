@@ -1,8 +1,6 @@
 function App() {
     return (
         <>
-            <div>sss</div>
-            <div>sdds</div>
         </>
     );
 }
