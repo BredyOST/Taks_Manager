@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Filter = () => {
+const CustomInput = () => {
 
     return (
         <div>
-            
+
         </div>
     );
 };
 
-export default Filter;
+export default CustomInput;
