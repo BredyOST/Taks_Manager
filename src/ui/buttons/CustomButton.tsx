@@ -12,10 +12,10 @@ interface ICustomButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     activeTab: TabsIdsType
 }
 
-const CustomButton = ({ children, type, indicator, isActive, onClickTab, activeTab}: ICustomButtonProps,) => {
+const CustomButton = ({ children, type='button', indicator, isActive, onClickTab, activeTab}: ICustomButtonProps,) => {
 
     if(indicator === HomeTypesButton.tabHome) {
-        return <TabsButton type={type ?? 'button'} isActive={isActive} onClick={() => onClickTab(activeTab)}>
+        return <TabsButton type={type} isActive={isActive} onClick={() => onClickTab(activeTab)}>
             {children}
         </TabsButton>;
     }
