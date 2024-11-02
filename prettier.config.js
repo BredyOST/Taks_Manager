@@ -1,10 +1,11 @@
 const config = {
-    singleQuote: true,
-    jsxSingleQuote: true,
-    arrowParens: 'always',
-    'max-len': ['error', 140, 2],
-    tabWidth: 4,
-    useTabs: false,
+    singleQuote: true, // Использовать одинарные кавычки вместо двойных
+    jsxSingleQuote: true, // Использовать одинарные кавычки в JSX
+    arrowParens: 'always', // Всегда использовать скобки вокруг параметров стрелочной функции
+    printWidth: 140, // Максимальная длина строки
+    tabWidth: 4, // Ширина табуляции равна 4 пробелам
+    useTabs: false, // Использовать пробелы вместо табуляции
+    semi: true, // Всегда использовать точки с запятой
 };
 
 export default config;

@@ -5,12 +5,7 @@ import buildLoaders from './builLoaders';
 import buildResolvers from './buildResolvers';
 import buildDevServer from './buildDevServer';
 
-export function buildWebpackConfig({
-    paths,
-    mode,
-    port,
-    isDev,
-}: BuildOptions): webpack.Configuration {
+export function buildWebpackConfig({ paths, mode, port, isDev }: BuildOptions): webpack.Configuration {
     return {
         mode: mode,
         entry: paths.entry,
