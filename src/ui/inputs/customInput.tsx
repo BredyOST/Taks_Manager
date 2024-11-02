@@ -1,11 +1,13 @@
 import React from 'react';
 
-const CustomInput = () => {
+interface ICustomInputProps extends React.HTMLAttributes<HTMLInputElement> {
+    type: 'text' | 'password';
+}
+
+const CustomInput = ({type = 'text'}: ICustomInputProps) => {
 
     return (
-        <div>
-
-        </div>
+        <input type={type}/>
     );
 };
 
