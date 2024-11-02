@@ -9,7 +9,7 @@
         "eslint": "eslint .",
         "prettier": "prettier --write ."
     },
-    "type": "module",
+
     "keywords": [],
     "author": "",
     "license": "ISC",
