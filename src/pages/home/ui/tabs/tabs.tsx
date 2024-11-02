@@ -1,7 +1,7 @@
 import React from 'react';
 import {CoverTabs} from '../../styled/homeStyled';
 import {HomeTypesButton, TabsHome} from '../../types/HomeTypes';
-import CustomButton from '../../../../ui/buttons/CustomButton';
+import CustomButton from '../../../../shared/ui/buttons/CustomButton';
 
 const TEXT_FOR_TABS: TabsHome[] = [
     { id: 1, text: 'Активные задачи' },

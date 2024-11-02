@@ -40,3 +40,15 @@ export const TabsButton= styled.button<ITabsButton>`
         justify-content: center; // Центрируем по горизонтали
     }
 `;
+
+export const CoverSelect = styled.div`
+  
+`;
+
+export const SelectCover = styled.select`
+  
+`;
+
+export const OptionSelect = styled.option`
+  
+`;
