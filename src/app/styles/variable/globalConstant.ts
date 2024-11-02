@@ -11,6 +11,5 @@ export const TABLET = 991.98; // Планшеты, некоторые телеф
 export const MOBILE = 767.98; // Телефоны L
 export const MOBILE_SMALL = 479.98; // Телефоны S
 
-
 // для страниц
 export const MAIN_SIZE = 16;

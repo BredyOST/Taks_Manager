@@ -1,14 +1,13 @@
-import {css} from "styled-components";
+import { css } from 'styled-components';
 
-
-export function percent(px:number, from:number):number {
-    return px / from * 100;
+export function percent(px: number, from: number): number {
+    return (px / from) * 100;
 }
-export function rem(px:number) {
-    return `${px / 16}rem`
+export function rem(px: number) {
+    return `${px / 16}rem`;
 }
-export function em(px:number) {
-    return `${px / 16}em`
+export function em(px: number) {
+    return `${px / 16}em`;
 }
 
 export const adaptiveValue = (
@@ -17,7 +16,7 @@ export const adaptiveValue = (
     minSizePx: number,
     keepSize: number = 0,
     widthFromPx: number = 1200,
-    widthToPx: number = 320
+    widthToPx: number = 320,
 ) => {
     startSizePx = startSizePx === 0 ? 0.000001 : startSizePx;
     minSizePx = minSizePx === 0 ? 0.000001 : minSizePx;
@@ -39,29 +38,33 @@ export const adaptiveValue = (
     }
 
     return css`
-${property}: ${propertyValue};
+        ${property}: ${propertyValue};
 
-${keepSize !== 1 && keepSize !== 3 && css`
-min-width: ${widthFromMedia} {
-${property}: ${startSizePx / 16}rem;
-}
-`}
+        ${keepSize !== 1 &&
+        keepSize !== 3 &&
+        css`
+            min-width: ${widthFromMedia} {
+                ${property}: ${startSizePx / 16}rem;
+            }
+        `}
 
-${keepSize !== 1 && keepSize !== 2 && css`
-max-width: ${widthToMedia} {
-${property}: ${minSizePx / 16}rem;
-}
-`}
+        ${keepSize !== 1 &&
+        keepSize !== 2 &&
+        css`
+            max-width: ${widthToMedia} {
+                ${property}: ${minSizePx / 16}rem;
+            }
+        `}
 
 min-width: ${widthToMedia} and (max-width: ${widthFromMedia}) {
-@supports (${property}: ${propertyValue}) {
-${property}: ${propertyValue};
-}
+            @supports (${property}: ${propertyValue}) {
+                ${property}: ${propertyValue};
+            }
 
-@supports not (${property}: ${propertyValue}) {
-// Здесь мы используем calc, чтобы поддержать браузеры без clamp
-${property}: calc(${minSizePx / 16}rem + ${addSize} * (100vw - ${widthToPx}px) / (${widthFromPx / 16} - ${widthToPx / 16}));
-}
-}
-`;
+            @supports not (${property}: ${propertyValue}) {
+                // Здесь мы используем calc, чтобы поддержать браузеры без clamp
+                ${property}: calc(${minSizePx / 16}rem + ${addSize} * (100vw - ${widthToPx}px) / (${widthFromPx / 16} - ${widthToPx / 16}));
+            }
+        }
+    `;
 };
