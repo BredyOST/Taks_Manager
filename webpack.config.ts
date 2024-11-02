@@ -4,7 +4,7 @@ import {
     BuildEnv,
     BuildMode,
     BuildPath,
-    PORT,
+    PORT_BASIC,
 } from './config/build/types/config';
 import path from 'path';
 
@@ -15,7 +15,7 @@ export default (env: BuildEnv) => {
         html: './src/index.html',
     };
     const buildMod: BuildMode = env.mode || 'development';
-    const PORT = +env.mode || 3000;
+    const PORT = +env.mode || PORT_BASIC;
     const isDev = buildMod === 'development';
 
     const config: webpack.Configuration = buildWebpackConfig({
