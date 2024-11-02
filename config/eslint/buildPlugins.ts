@@ -1,5 +1,5 @@
-import * as prettierPlugin from "eslint-plugin-prettier";
-import * as typescriptPlugin from "@typescript-eslint/eslint-plugin";
+import prettierPlugin from "eslint-plugin-prettier";
+import typescriptPlugin from "@typescript-eslint/eslint-plugin";
 
 function buildPlugins() {
 

@@ -1,7 +1,6 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import webpack from "webpack";
+import webpack from 'webpack';
 import {BuildPath} from "./types/config";
-
 
 function buildPlugins(paths:BuildPath):webpack.WebpackPluginInstance[] {
     return [

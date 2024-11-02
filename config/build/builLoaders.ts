@@ -1,6 +1,5 @@
 import webpack from "webpack";
 
-
 function buildLoaders():webpack.RuleSetRule[] {
 
     const cssLoaders = {

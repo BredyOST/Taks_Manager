@@ -1,4 +1,3 @@
-import buildLoaders from "../build/builLoaders";
 import prettierConfig from "eslint-config-prettier";
 
 function buildRules()
@@ -12,4 +11,4 @@ function buildRules()
     }
 }
 
-export default buildLoaders;
+export default buildRules;
