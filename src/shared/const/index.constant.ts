@@ -1,5 +1,4 @@
-import {TabsHome} from "../../pages/home/types/HomeTypes";
-
+import { TabsHome } from '../../pages/home/types/HomeTypes';
 
 /**
  * для табов

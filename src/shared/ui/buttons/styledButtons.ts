@@ -1,7 +1,5 @@
-import styled from "styled-components";
-import {rem} from "../../../app/styles/common";
-
-
+import styled from 'styled-components';
+import { rem } from '../../../app/styles/common';
 
 interface ITabsButton {
     $isActive: boolean;
@@ -14,9 +12,8 @@ export const TabsButton = styled.button<ITabsButton>`
     padding-bottom: ${rem(8)};
     display: flex;
     column-gap: ${rem(15)};
-    border-bottom: ${(props) =>
-    props.$isActive ? "2px solid #007bff" : "2px solid transparent"};
-    
+    border-bottom: ${(props) => (props.$isActive ? '2px solid #007bff' : '2px solid transparent')};
+
     align-items: center;
     justify-content: center;
     span {

@@ -13,4 +13,3 @@ export const MOBILE_SMALL = 479.98; // Телефоны S
 
 // для страниц
 export const MAIN_SIZE = 16;
-
