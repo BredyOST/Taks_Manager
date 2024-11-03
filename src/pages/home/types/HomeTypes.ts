@@ -5,6 +5,7 @@ import { TEXT_FOR_TABS } from '../../../shared/const/index.constant';
  */
 export enum HomeTypesButton {
     'tabHome' = 'tabHome',
+    'btnChangeTask' = 'btnChangeTask',
 }
 
 export enum FilterIndicatorHome {
@@ -20,3 +21,23 @@ export type TabsIdsType = (typeof TEXT_FOR_TABS)[number]['id'];
  * тип для объекта таба
  */
 export type TabsHome = { id: number; text: string };
+
+/**
+ * для задач
+ */
+export interface ITasks {
+    id: number;
+    title: string;
+    taskText: string;
+    dataStart: string;
+    dataEnd: string;
+}
+
+/**
+ * для кнопок в тасках
+ */
+
+export interface ITextBtnTask {
+        id:number
+    text: string
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HomeTypesButton, TabsIdsType } from '../../../../pages/home/types/HomeTypes';
-import { TabsButton } from '../styledButtons';
+import {BtnTasks, TabsButton} from '../styledButtons';
 
 interface ICustomButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode | string;
@@ -8,10 +8,11 @@ interface ICustomButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     indicator: HomeTypesButton;
     isActive: boolean;
     onClickTab: (num: number) => void;
-    activeTab: TabsIdsType;
+    activeTab: TabsIdsType | null;
 }
 
 const CustomButton = ({ children, type = 'button', indicator, isActive, onClickTab, activeTab }: ICustomButtonProps) => {
+
     if (indicator === HomeTypesButton.tabHome) {
         return (
             <TabsButton type={type} $isActive={isActive} onClick={() => onClickTab(activeTab)}>
@@ -19,6 +20,14 @@ const CustomButton = ({ children, type = 'button', indicator, isActive, onClickT
             </TabsButton>
         );
     }
+
+    if(indicator === HomeTypesButton.btnChangeTask) {
+        return (
+            <BtnTasks type={type}>{children}</BtnTasks>
+        )
+    }
+
+    return null
 };
 
 export default CustomButton;

@@ -1,5 +1,7 @@
 import React from 'react';
 import { OptionSelect, SelectCover } from '../../styled/homeStyled';
+import {useDispatch} from "react-redux";
+import {filterActions} from "../../../../app/redux/slices/filterSlice";
 
 const OPTIONS_FRO_SELECT = [
     { id: 1, count: 10 },
@@ -8,6 +10,7 @@ const OPTIONS_FRO_SELECT = [
 ];
 
 const Select = () => {
+
     return (
         <div>
             <label htmlFor=''>Показать</label>

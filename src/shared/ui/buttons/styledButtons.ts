@@ -29,3 +29,20 @@ export const TabsButton = styled.button<ITabsButton>`
         justify-content: center; // Центрируем по горизонтали
     }
 `;
+
+
+export const BtnTasks = styled.button`
+    font-family: 'Tinos';
+    outline: none;
+    padding-top: ${rem(6)};
+    padding-bottom: ${rem(6)};
+    padding-left: ${rem(8)};
+    padding-right: ${rem(8)};
+    border-radius: ${rem(5)};
+    background-color: antiquewhite;
+    transition: background-color ease 0.3s 0s;
+    &:hover {
+        background-color: #cfbfa9;
+        transition: background-color ease 0.3s 0s;
+    }
+`;

@@ -1,10 +1,9 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { IStore } from './storeType';
-import FilterSliceReducer from './../slices/filterSlice'
-
+import FilterSliceReducer from './../slices/filterSlice';
 
 const rootReducer: ReducersMapObject<IStore> = {
-        filter:FilterSliceReducer
+    filter: FilterSliceReducer,
 };
 
 export const store = configureStore({

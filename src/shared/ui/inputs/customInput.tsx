@@ -6,11 +6,12 @@ interface ICustomInputProps extends React.HTMLAttributes<HTMLInputElement> {
     type: 'text' | 'password';
     indicator: FilterIndicatorHome;
     placeholder: string;
+    defaultValue: string
 }
 
-const CustomInput = ({ type = 'text', indicator, placeholder }: ICustomInputProps) => {
+const CustomInput = ({ type = 'text', indicator, placeholder,defaultValue }: ICustomInputProps) => {
     if (indicator === FilterIndicatorHome.filterHome) {
-        return <InputFilterHome type={type} placeholder={placeholder} />;
+        return <InputFilterHome defaultValue={defaultValue} type={type} placeholder={placeholder} />;
     }
 
     return null;
