@@ -1,13 +1,13 @@
 import React from 'react';
 import {CoverTabs} from '../../styled/homeStyled';
 import {HomeTypesButton, TabsHome, TabsIdsType} from '../../types/HomeTypes';
-import CustomButton from '../../../../shared/ui/buttons/CustomButton';
+import CustomButton from '../../../../shared/ui/buttons/styled/CustomButton';
 import {TEXT_FOR_TABS} from "../../../../shared/const/index.constant";
 
 const Tabs = () => {
 
     const [activeTab, setActiveTab] = React.useState<TabsIdsType>(1);
-    const changeActivetab = (num:TabsIdsType) => {
+    const changeActiveTab = (num:TabsIdsType) => {
         setActiveTab(num)
     }
 
@@ -20,7 +20,7 @@ const Tabs = () => {
                             type='button'
                             indicator={HomeTypesButton.tabHome}
                             isActive={activeTab == item.id}
-                            onClickTab={() => changeActivetab(item.id)}
+                            onClickTab={() => changeActiveTab(item.id)}
                             activeTab={activeTab}
                         >
                             {item.text}
