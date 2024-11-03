@@ -14,17 +14,19 @@ export const CoverTabs = styled.div`
 `;
 
 interface ITabsButton {
-    isActive: boolean;
+    $isActive: boolean;
 }
 
-export const TabsButton= styled.button<ITabsButton>`
+export const TabsButton = styled.button<ITabsButton>`
     font-family: 'Tinos';
     outline: none;
     padding-top: ${rem(8)};
     padding-bottom: ${rem(8)};
     display: flex;
     column-gap: ${rem(15)};
-    border-bottom: ${({isActive}) => (isActive ? '2px solid #007bff' : '2px solid transparent')};
+    border-bottom: ${(props) =>
+            props.$isActive ? "2px solid #007bff" : "2px solid transparent"};
+    
     align-items: center;
     justify-content: center;
     span {
@@ -33,8 +35,8 @@ export const TabsButton= styled.button<ITabsButton>`
         border-radius: ${rem(3)};
         padding-top: ${rem(2)};
         padding-bottom: ${rem(2)};
-        padding-left: ${rem(5)};
-        padding-right: ${rem(5)};
+        padding-left: ${rem(8)};
+        padding-right: ${rem(8)};
         display: flex; // Устанавливаем flex для центрирования содержимого
         align-items: center; // Центрируем по вертикали
         justify-content: center; // Центрируем по горизонтали

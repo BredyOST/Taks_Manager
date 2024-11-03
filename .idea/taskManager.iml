@@ -8,6 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="search-client" />
+    <orderEntry type="module" module-name="auth-forms" />
   </component>
 </module>

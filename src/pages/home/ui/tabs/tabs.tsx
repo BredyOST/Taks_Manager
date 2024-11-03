@@ -1,16 +1,8 @@
 import React from 'react';
 import {CoverTabs} from '../../styled/homeStyled';
-import {HomeTypesButton, TabsHome} from '../../types/HomeTypes';
+import {HomeTypesButton, TabsHome, TabsIdsType} from '../../types/HomeTypes';
 import CustomButton from '../../../../shared/ui/buttons/CustomButton';
-
-const TEXT_FOR_TABS: TabsHome[] = [
-    { id: 1, text: 'Активные задачи' },
-    { id: 2, text: 'Завершенные задачи' },
-    { id: 3, text: 'Архив' },
-];
-
-export type TabsIdsType = typeof TEXT_FOR_TABS[number]['id'];
-
+import {TEXT_FOR_TABS} from "../../../../shared/const/index.constant";
 
 const Tabs = () => {
 
