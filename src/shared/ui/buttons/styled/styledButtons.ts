@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { rem } from '../../../app/styles/common';
+import { rem } from '../../../../app/styles/common';
 
 interface ITabsButton {
     $isActive: boolean;
@@ -34,15 +34,15 @@ export const TabsButton = styled.button<ITabsButton>`
 export const BtnTasks = styled.button`
     font-family: 'Tinos';
     outline: none;
-    padding-top: ${rem(6)};
-    padding-bottom: ${rem(6)};
-    padding-left: ${rem(8)};
-    padding-right: ${rem(8)};
-    border-radius: ${rem(5)};
-    background-color: antiquewhite;
-    transition: background-color ease 0.3s 0s;
+    padding-top: ${rem(10)};
+    padding-bottom: ${rem(10)};
+    padding-left: ${rem(15)};
+    padding-right: ${rem(15)};
+    border-radius: ${rem(18)};
+    background-color: #e6eff3;
+
     &:hover {
-        background-color: #cfbfa9;
+        background-color: #a2bac5;;
         transition: background-color ease 0.3s 0s;
     }
 `;

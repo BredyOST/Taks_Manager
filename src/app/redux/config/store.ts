@@ -1,9 +1,11 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { IStore } from './storeType';
-import FilterSliceReducer from './../slices/filterSlice';
+import FilterSliceReducer from '../slices/filterSlice/filterSlice';
+import ActiveTaskForPortalStateReducer from '../slices/acitiveTaskForPortal/acitiveTaskForPortal'
 
 const rootReducer: ReducersMapObject<IStore> = {
     filter: FilterSliceReducer,
+    activeTaskForPortal: ActiveTaskForPortalStateReducer,
 };
 
 export const store = configureStore({

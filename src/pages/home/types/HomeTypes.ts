@@ -5,7 +5,7 @@ import { TEXT_FOR_TABS } from '../../../shared/const/index.constant';
  */
 export enum HomeTypesButton {
     'tabHome' = 'tabHome',
-    'btnChangeTask' = 'btnChangeTask',
+    'btnOpenTask' = 'btnOpenTask',
 }
 
 export enum FilterIndicatorHome {
@@ -34,6 +34,7 @@ export type TabsHome = { id: number; text: string };
 export interface ITasks {
     id: number;
     title: string;
+    subtitle: string;
     taskText: string;
     dataStart: string;
     dataEnd: string;

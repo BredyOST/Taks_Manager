@@ -1,10 +1,10 @@
 import React from 'react';
 import { CoverTabs } from '../../styled/homeStyled';
 import { HomeTypesButton, TabsHome, TabsIdsType } from '../../types/HomeTypes';
-import CustomButton from '../../../../shared/ui/buttons/styled/CustomButton';
+import CustomButton from '../../../../shared/ui/buttons/CustomButton';
 import { TEXT_FOR_TABS } from '../../../../shared/const/index.constant';
 import {useAppDispatch, useAppSelector} from "../../../../app/redux/hooks/hooks";
-import {filterActions} from "../../../../app/redux/slices/filterSlice";
+import {filterActions} from "../../../../app/redux/slices/filterSlice/filterSlice";
 
 const Tabs = () => {
 
@@ -28,6 +28,7 @@ const Tabs = () => {
                         onClickTab={() => changeTab(item.id)}
                         activeTab={activeTab}
                         onClickTask={null}
+                        onClickOpenTask={null}
                     >
                         {item.text}
                         {item.id == 1 && <span>{tasksActive.length}</span>}

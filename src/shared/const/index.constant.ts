@@ -11,8 +11,8 @@ export const TEXT_FOR_TABS: TabsHome[] = [
 
 
 export const TasksBtnText = [
-    {id:1, text: 'Изменить'},
-    {id:2, text: 'Выполнено'},
+    // {id:1, text: 'Изменить'},
+    {id:2, text: 'Выполнть'},
     {id:3, text: 'Удалить'},
     {id:4, text: 'В архив'},
 ]

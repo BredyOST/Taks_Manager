@@ -14,7 +14,7 @@ export const CoverTabs = styled.div`
 
 export const CoverMainTask = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: auto;
     column-gap: ${rem(10)};
     row-gap: ${rem(10)};
@@ -27,12 +27,19 @@ export const SelectCover = styled.select``;
 
 export const OptionSelect = styled.option``;
 
-export const TaskCoverDiv = styled.div`
+export const TaskCoverButton = styled.button`
     display: flex;
     flex-direction: column;
-    border: 2px solid rgba(0, 0, 0, 0.55);
-    border-radius: ${rem(5)};
+    border: 2px solid rgba(50, 103, 156, 0.55);
+    border-radius: ${rem(10)};
     padding: ${rem(7)};
+    max-width: ${rem(350)};
+    transition: background-color ease 0.3s 0s;
+
+    &:hover {
+        background-color: rgb(246, 242, 242);
+        transition: background-color ease 0.3s 0s;
+    }
 `;
 
 export const TaskCoverTextAndTitle = styled.div`
@@ -43,6 +50,7 @@ export const TaskCoverTextAndTitle = styled.div`
 export const TaskCoverHead = styled.div`
     display: flex;    
     flex-direction: column;
+    min-width: 100%;
     row-gap: ${rem(10)};
 `;
 
@@ -56,6 +64,7 @@ export const TextTask = styled.div`
     font-weight: 400;
     font-size: ${rem(16)};
     line-height: ${math(16, 20)};
+    text-align: left;
 `;
 
 export const DataTask = styled.div`
@@ -73,8 +82,3 @@ export const DataTitle = styled.div`
 `;
 
 
-export const CoverBtnsInTask = styled.div`
-  display: flex;
-  column-gap: ${rem(5)};
-    justify-content: flex-end;
-`;
