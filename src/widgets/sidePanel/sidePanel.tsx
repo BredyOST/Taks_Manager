@@ -12,7 +12,7 @@ import {TasksBtnText} from "../../shared/const/index.constant";
 import CustomButton from "../../shared/ui/buttons/CustomButton";
 import {useAppDispatch, useAppSelector} from "../../app/redux/hooks/hooks";
 import {filterActions} from "../../app/redux/slices/filterSlice/filterSlice";
-import {activeTaskSliceActions} from "../../app/redux/slices/acitiveTaskForPortal/acitiveTaskForPortal";
+import {activeTaskSliceActions} from "../../app/redux/slices/additionalIndicators/additionalIndicators";
 
 interface ISidePanel {
     task: ITasks

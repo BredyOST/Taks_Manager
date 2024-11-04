@@ -7,7 +7,7 @@ import SidePanel from "./widgets/sidePanel/sidePanel";
 
 function App() {
 
-    const {activeTask} = useAppSelector(state => state.activeTaskForPortal)
+    const {activeTask} = useAppSelector(state => state.additionalIndicators)
 
     return (
         <>

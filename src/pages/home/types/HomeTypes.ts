@@ -6,6 +6,7 @@ import { TEXT_FOR_TABS } from '../../../shared/const/index.constant';
 export enum HomeTypesButton {
     'tabHome' = 'tabHome',
     'btnOpenTask' = 'btnOpenTask',
+    'addTask' = 'addTask',
 }
 
 export enum FilterIndicatorHome {

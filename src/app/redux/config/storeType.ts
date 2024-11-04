@@ -1,7 +1,7 @@
 import { FilterSliceType } from '../slices/filterSlice/filterSlice';
-import {IActiveTaskForPortalState} from "../slices/acitiveTaskForPortal/acitiveTaskForPortal";
+import { IAdditionalIndicators} from "../slices/additionalIndicators/additionalIndicators";
 
 export interface IStore {
     filter: FilterSliceType;
-    activeTaskForPortal:IActiveTaskForPortalState;
+    additionalIndicators:IAdditionalIndicators;
 }

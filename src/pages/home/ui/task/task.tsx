@@ -9,7 +9,7 @@ import {
 import {HomeTypesButton, ITasks} from '../../types/HomeTypes';
 import {useDispatch} from "react-redux";
 import CustomButton from "../../../../shared/ui/buttons/CustomButton";
-import {activeTaskSliceActions} from "../../../../app/redux/slices/acitiveTaskForPortal/acitiveTaskForPortal";
+import {activeTaskSliceActions} from "../../../../app/redux/slices/additionalIndicators/additionalIndicators";
 
 interface ITask {
     item: ITasks;

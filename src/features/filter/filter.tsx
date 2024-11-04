@@ -7,12 +7,15 @@ import {useDispatch} from "react-redux";
 import {filterActions} from "../../app/redux/slices/filterSlice/filterSlice";
 import {useAppSelector} from "../../app/redux/hooks/hooks";
 import CustomButton from "../../shared/ui/buttons/CustomButton";
+import {activeTaskSliceActions} from "../../app/redux/slices/additionalIndicators/additionalIndicators";
 
 const Filter = () => {
 
     const dispatch = useDispatch();
     const {searchTasks, countTusks} = useAppSelector(state => state.filter);
+    const {activeModalAddTask} = useAppSelector(state => state.additionalIndicators)
     const {changeCountTasks, changeSearchTasks} = filterActions
+    const {changeStateModalAddTask}  = activeTaskSliceActions
     const changeSelectCount = (e:React.ChangeEvent<HTMLSelectElement>) => {
         dispatch(changeCountTasks(+e.target.value))
     }
@@ -20,13 +23,16 @@ const Filter = () => {
        dispatch(changeSearchTasks(e.target.value))
     }
 
+    const openModalWindow = () => {
+        dispatch(changeStateModalAddTask(!activeModalAddTask))
+    }
     return (
         <FilterCoverDiv>
             <CustomButton
                 type='button'
-                indicator={HomeTypesButton.tabHome}
+                indicator={HomeTypesButton.addTask}
                 isActive={false}
-                onClickTab={null}
+                onClickTab={() => openModalWindow()}
                 activeTab={null}
                 onClickTask={null}
                 onClickOpenTask={null}
