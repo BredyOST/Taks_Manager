@@ -1,4 +1,4 @@
-import { TabsHome } from '../../pages/home/types/HomeTypes';
+import {IndexTasks, TabsHome} from '../../pages/home/types/HomeTypes';
 
 /**
  * для табов
@@ -25,3 +25,12 @@ export const OPTIONS_FRO_SELECT = [
     { id: 2, count: 30 },
     { id: 3, count: 50 },
 ];
+
+/**
+ * количество полей в задаче для ее создания
+ */
+export const COUNT_VALUES_IN_TASK = [
+    {id: 1, title: 'Название задачи', placeholder: 'Введите название'},
+    {id: 2, title: 'Подзаголовок', placeholder: 'Введите название'},
+    {id: 3, title: 'Описание задачи', placeholder: 'Введите название'},
+]

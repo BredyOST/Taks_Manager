@@ -5,6 +5,7 @@ import {useAppSelector} from "./app/redux/hooks/hooks";
 import Portal from "./shared/ui/portal/portal";
 import SidePanel from "./widgets/sidePanel/sidePanel";
 import Modal from "./shared/ui/modal/modal";
+import AddTask from "./widgets/addTask/addTask";
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
             }
             {/*{activeModalAddTask &&*/}
                 <Portal whereToAdd={document.body}>
-                    <Modal/>
+                    <Modal>
+                        <AddTask/>
+                    </Modal>
                 </Portal>
             {/*}*/}
         </>
