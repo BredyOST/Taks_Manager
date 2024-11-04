@@ -11,7 +11,7 @@ const Tabs = () => {
     const dispatch = useAppDispatch();
 
     const {changeActiveTab} = filterActions
-    const {activeTab} = useAppSelector(state => state.filter)
+    const {activeTab, tasksArchived, tasksActive, tasksFinished} = useAppSelector(state => state.filter)
     const changeTab = (num: TabsIdsType) => {
         dispatch(changeActiveTab(num))
     };
@@ -27,9 +27,12 @@ const Tabs = () => {
                         isActive={activeTab == item.id}
                         onClickTab={() => changeTab(item.id)}
                         activeTab={activeTab}
+                        onClickTask={null}
                     >
                         {item.text}
-                        <span>2</span>
+                        {item.id == 1 && <span>{tasksActive.length}</span>}
+                        {item.id == 2 && <span>{tasksFinished.length}</span>}
+                        {item.id == 3 && <span>{tasksArchived.length}</span>}
                     </CustomButton>
                 ))}
         </CoverTabs>

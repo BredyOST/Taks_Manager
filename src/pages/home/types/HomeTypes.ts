@@ -12,6 +12,12 @@ export enum FilterIndicatorHome {
     'filterHome' = 'filterHome',
 }
 
+export enum IndexTasks {
+    'activeTask' = '1',
+    'finishedTask' = '2',
+    'archivedTask' = '3',
+}
+
 /**
  * тип для табов - числовое значение
  */
@@ -31,6 +37,7 @@ export interface ITasks {
     taskText: string;
     dataStart: string;
     dataEnd: string;
+    index: IndexTasks;
 }
 
 /**
@@ -39,5 +46,5 @@ export interface ITasks {
 
 export interface ITextBtnTask {
         id:number
-    text: string
+        text: string
 }

@@ -1,29 +1,52 @@
 import React from 'react';
 import Task from '../ui/task/task';
-import { ITasks } from '../types/HomeTypes';
+import {IndexTasks, ITasks} from '../types/HomeTypes';
 import { CoverMainTask } from '../styled/homeStyled';
 import {useAppSelector} from "../../../app/redux/hooks/hooks";
+import {TEXT_FOR_TABS} from "../../../shared/const/index.constant";
+
+
 
 const TASK_LIST: ITasks[] = [
-    { id: 1, title: 'web', taskText: 'зайти на wb', dataStart: '01-10-2023', dataEnd: '02-10-2023' },
-    { id: 2, title: 'web', taskText: 'зайти на wb и начат продавать а потом улететь в америку и купить тамдом ', dataStart: '01-10-2023', dataEnd: '02-10-2023' },
-    { id: 3, title: 'web', taskText: 'зайти на wb', dataStart: '01-10-2023', dataEnd: '02-10-2023' },
-    { id: 4, title: 'web', taskText: 'зайти на wb', dataStart: '01-10-2023', dataEnd: '02-10-2023' },
-    { id: 5, title: 'web', taskText: 'зайти на wb и начат продавать а потом улететь в америку и купить тамдом ', dataStart: '01-10-2023', dataEnd: '02-10-2023' },
-    { id: 6, title: 'web', taskText: 'зайти на wb', dataStart: '01-10-2023', dataEnd: '02-10-2023' },
+
 ];
+
+const TASK_LIST_END: ITasks[] = [
+];
+
+const TASK_LIST_ARCHIVE: ITasks[] = [
+];
+
 
 const Tasks = () => {
 
-    const {activeTab} = useAppSelector(state => state.filter)
-    if(activeTab === 1) {
-        return <CoverMainTask>{TASK_LIST.length > 0 && TASK_LIST.map((item) => <Task item={item} key={item.id} />)}</CoverMainTask>;
-    } else if(activeTab === 2) {
-        return null
-    } else if(activeTab === 3) {
-        return null
+    const {activeTab, searchTasks, countTusks, tasksActive, tasksArchived, tasksFinished} = useAppSelector(state => state.filter)
+    const [sortedTasks, setSortedTasks] = React.useState<ITasks[]>([])
+
+    function getSortedTasks (items: ITasks[]):void {
+        let result;
+        if(searchTasks?.length >= 1) {
+            result = items.filter((item) => item.taskText.includes(searchTasks))
+            setSortedTasks(result)
+        } else {
+            setSortedTasks(items)
+        }
     }
 
+    React.useEffect(() => {
+
+        if(activeTab === 1) {
+            getSortedTasks(tasksActive)
+        }
+        if( activeTab === 2) {
+            getSortedTasks(tasksFinished)
+        }
+        if( activeTab === 3) {
+            getSortedTasks(tasksArchived)
+        }
+    },[activeTab, searchTasks, countTusks, tasksActive, tasksArchived, tasksFinished])
+
+        return <CoverMainTask>{sortedTasks.length > 0 && sortedTasks.map((item) => <Task item={item} key={item.id} />)}</CoverMainTask>;
 };
 
 export default Tasks;

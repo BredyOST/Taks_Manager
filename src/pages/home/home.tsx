@@ -6,6 +6,7 @@ import Filter from '../../features/filter/filter';
 import Tasks from './tasks/tasks';
 
 const Home = () => {
+
     return (
         <WrappedMainDiv>
             <ContainerDiv>

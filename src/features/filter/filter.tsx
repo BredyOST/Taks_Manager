@@ -9,22 +9,23 @@ import {useAppSelector} from "../../app/redux/hooks/hooks";
 
 const Filter = () => {
 
-
     const dispatch = useDispatch();
     const {searchTasks, countTusks} = useAppSelector(state => state.filter);
     const {changeCountTasks, changeSearchTasks} = filterActions
-    const changeSelectCount = (num:number) => {
-        dispatch(changeCountTasks(num))
+    const changeSelectCount = (e:React.ChangeEvent<HTMLSelectElement>) => {
+        dispatch(changeCountTasks(+e.target.value))
     }
-    const changeSearchText = (str:string) => {
-       dispatch(changeSearchTasks(str))
+    const changeSearchText = (e:React.ChangeEvent<HTMLInputElement>) => {
+       dispatch(changeSearchTasks(e.target.value))
     }
-    console.log(searchTasks)
 
     return (
         <FilterCoverDiv>
-            <Select />
-            <CustomInput defaultValue={searchTasks} type='text' indicator={FilterIndicatorHome.filterHome} placeholder='Поиск' />
+            <Select
+                onChange={(e:React.ChangeEvent<HTMLSelectElement>) => changeSelectCount(e)}
+                defaultValue={countTusks}
+            />
+            <CustomInput value={searchTasks} onChange={(e:React.ChangeEvent<HTMLInputElement>) => changeSearchText(e)} defaultValue={searchTasks} type='text' indicator={FilterIndicatorHome.filterHome} placeholder='Поиск' />
         </FilterCoverDiv>
     );
 };
