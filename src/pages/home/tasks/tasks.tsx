@@ -1,22 +1,8 @@
 import React from 'react';
 import Task from '../ui/task/task';
-import {IndexTasks, ITasks} from '../types/HomeTypes';
+import {ITasks} from '../types/HomeTypes';
 import { CoverMainTask } from '../styled/homeStyled';
 import {useAppSelector} from "../../../app/redux/hooks/hooks";
-import {TEXT_FOR_TABS} from "../../../shared/const/index.constant";
-
-
-
-const TASK_LIST: ITasks[] = [
-
-];
-
-const TASK_LIST_END: ITasks[] = [
-];
-
-const TASK_LIST_ARCHIVE: ITasks[] = [
-];
-
 
 const Tasks = () => {
 
