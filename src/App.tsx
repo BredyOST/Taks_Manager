@@ -9,6 +9,7 @@ import Header from './widgets/header/header';
 import { ROUTES_REGISTERED } from './app/routes/routes';
 import { Route, Routes } from 'react-router-dom';
 import { HomeContainer } from './app/styles/variable/globalStyled';
+import LoadingPages from "./widgets/loadingPages/loadingPages";
 
 function App() {
     const { activeTask, activeModalAddTask } = useAppSelector((state) => state.additionalIndicators);
@@ -18,6 +19,7 @@ function App() {
             <GlobalStyles />
             <Header />
             <HomeContainer>
+                <React.Suspense fallback={<LoadingPages/>}>
                 <Routes>
                     {ROUTES_REGISTERED.length > 0 &&
                         ROUTES_REGISTERED.map((item) => (
@@ -26,6 +28,7 @@ function App() {
                             </Route>
                         ))}
                 </Routes>
+                </React.Suspense>
             </HomeContainer>
             {activeTask && (
                 <Portal whereToAdd={document.body}>

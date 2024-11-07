@@ -1,6 +1,6 @@
 import React from 'react';
 import { HomeTypesButton, TabsIdsType } from '../../../pages/home/types/HomeTypes';
-import { BtnAddTask, BtnOpenTasks, BtnPickData, BtnPopup } from './styled/styledButtons';
+import {BtnAddTask, BtnLogIn, BtnOpenTasks, BtnPickData, BtnPopup} from './styled/styledButtons';
 
 interface ICustomButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode | string;
@@ -63,6 +63,15 @@ const CustomButton = ({
                 <BtnPickData onClick={() => onClickTask()} type={type}>
                     {children}
                 </BtnPickData>
+            </>
+        );
+    }
+    if (indicator === HomeTypesButton.logIn) {
+        return (
+            <>
+                <BtnLogIn variant="contained" onClick={() => onClickTask()} type={type}>
+                    {children}
+                </BtnLogIn>
             </>
         );
     }

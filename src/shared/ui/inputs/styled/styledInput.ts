@@ -51,7 +51,7 @@ export const InputAddTask = styled(TextField)`
 export const InputSearch = styled(TextField)`
     flex: 0 1 ${rem(700)};
     padding-top: 0;
-
+z-index: 0;
     .MuiFormControl-root {
         display: flex;
         flex: 1 1 auto;

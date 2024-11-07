@@ -6,7 +6,6 @@ export const FormAddTask = styled.form`
     flex-direction: column;
     row-gap: ${rem(15)};
     min-width: 100%;
-    flex: 1 1 auto;
 `;
 
 export const CoverBtnsAddTask = styled.div`

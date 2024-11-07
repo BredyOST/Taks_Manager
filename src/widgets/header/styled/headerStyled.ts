@@ -15,5 +15,7 @@ export const HeaderBody = styled.div`
 `;
 
 export const HeaderLogo = styled.div`
-  
+    color: #ffffff;
+    font-size: ${rem(18)};
+    font-weight: 600;
 `;

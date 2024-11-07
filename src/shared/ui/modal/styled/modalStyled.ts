@@ -49,6 +49,7 @@ export const ContentModal = styled.div`
     padding-left: ${rem(10)};
     padding-right: ${rem(10)};
     overflow: auto;
+    z-index: 150;
 `;
 
 export const StyledSvgClose = styled(SvgClose)`

@@ -12,7 +12,7 @@ const Filter = () => {
     const dispatch = useDispatch();
     const { searchTasks, activeTab } = useAppSelector((state) => state.filter);
     const { activeModalAddTask } = useAppSelector((state) => state.additionalIndicators);
-    const { changeCountTasks, changeSearchTasks } = filterActions;
+    const {     changeSearchTasks } = filterActions;
     const { changeStateModalAddTask } = activeTaskSliceActions;
 
     const changeSearchText = (e: React.ChangeEvent<HTMLInputElement>) => {

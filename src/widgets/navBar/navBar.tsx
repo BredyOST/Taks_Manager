@@ -2,21 +2,27 @@ import React from 'react';
 import CustomButton from '../../shared/ui/buttons/CustomButton';
 import { HomeTypesButton } from '../../pages/home/types/HomeTypes';
 import { ROUTES_REGISTERED } from '../../app/routes/routes';
-import { Link } from 'react-router-dom';
+import {HeaderCoverLinks, HeaderLink, NavWrapper} from "./styled/navbarStyled/navBarStyled";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const NavBar = () => {
+
+    const {pathname} = useLocation()
+
     return (
-        <div>
+        <NavWrapper>
+            <HeaderCoverLinks>
             {ROUTES_REGISTERED.length > 0 &&
                 ROUTES_REGISTERED.map((item) => (
-                    <Link key={item.id} to={item.path}>
+                    <HeaderLink $isActive={pathname === item.path} key={item.id} to={item.path}>
                         {item.label}
-                    </Link>
+                    </HeaderLink>
                 ))}
-            <CustomButton type='button' indicator={HomeTypesButton.btnOpenTask}>
+            </HeaderCoverLinks>
+            <CustomButton type='button' indicator={HomeTypesButton.logIn}>
                 Войти
             </CustomButton>
-        </div>
+        </NavWrapper>
     );
 };
 

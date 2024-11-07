@@ -8,6 +8,7 @@ export enum HomeTypesButton {
     'addTask' = 'addTask',
     'closePopup' = 'closePopup',
     'pickData' = 'pickData',
+    'logIn' = 'logIn',
 }
 
 export enum FilterIndicatorHome {

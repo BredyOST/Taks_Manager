@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { rem } from '../../../../app/styles/common';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { BUTTON_COLOR_B, BUTTON_COLOR_B_HOVER } from '../../../../app/styles/variable/globalConstant';
+import {Button} from "@mui/material";
 
 interface ITabsButton {
     $isActive?: boolean;
@@ -55,4 +56,16 @@ export const BtnPickData = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+`;
+
+export const BtnLogIn = styled(Button)`
+    && {
+        background: aliceblue;
+        color: #284242;
+    }
+
+    &:hover {
+        background: #d6e2ec;
+    }
+
 `;
