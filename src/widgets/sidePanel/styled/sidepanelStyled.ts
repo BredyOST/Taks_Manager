@@ -1,9 +1,8 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { math, rem } from '../../../app/styles/common';
 
 const COLOR = `2px solid rgba(0, 0, 0, 0.11);`;
 const PADDING_BOTTOM = 10;
-
 
 const fadeIn = keyframes`
   0% {
@@ -31,7 +30,6 @@ interface ISideBar {
     $isVisible: boolean;
 }
 
-
 export const SideBarWrapper = styled.div<ISideBar>`
     position: absolute;
     top: 0;
@@ -48,9 +46,9 @@ export const SideBarWrapper = styled.div<ISideBar>`
     padding-bottom: ${rem(15)};
     overflow-y: auto;
     border-radius: ${rem(8)}; /* Добавлена скругленная форма */
-    animation: ${(props) => props.$isVisible ? fadeIn : fadeOut} 0.3s ease-out forwards;
+    animation: ${(props) => (props.$isVisible ? fadeIn : fadeOut)} 0.3s ease-out forwards;
     transition: transform ease 0.3s 0s;
-    transform: ${(props) => props.$isVisible ? 'translateX(0)' : 'translateX(50px)'};
+    transform: ${(props) => (props.$isVisible ? 'translateX(0)' : 'translateX(50px)')};
 `;
 
 export const SideBarControl = styled.div`

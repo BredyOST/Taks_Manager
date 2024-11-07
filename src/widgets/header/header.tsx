@@ -1,19 +1,19 @@
 import React from 'react';
-import {HeaderWrapper} from "./styled/headerStyled";
-import {HomeContainer} from "../../app/styles/variable/globalStyled";
-import NavBar from "../navBar/navBar";
+import {HeaderBody, HeaderLogo, HeaderWrapper} from './styled/headerStyled';
+import { HomeContainer } from '../../app/styles/variable/globalStyled';
+import NavBar from '../navBar/navBar';
 
 const Header = () => {
     return (
         <HeaderWrapper>
             <HomeContainer>
-                <div>
-                    <div>Task Manager</div>
-                </div>
-                <NavBar/>
+                <HeaderBody>
+                    <HeaderLogo>Task Manager</HeaderLogo>
+                <NavBar />
+                </HeaderBody>
             </HomeContainer>
-    </HeaderWrapper>
-    )
+        </HeaderWrapper>
+    );
 };
 
 export default Header;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { DayPicker } from 'react-day-picker';
 import { rem } from '../../../app/styles/common';
-import {DesktopDatePicker, LocalizationProvider, PickersLayout} from "@mui/x-date-pickers";
-import {TimePicker} from "@mui/x-date-pickers";
-import {DemoContainer} from "@mui/x-date-pickers/internals/demo";
+import { DesktopDatePicker, LocalizationProvider, PickersLayout } from '@mui/x-date-pickers';
+import { TimePicker } from '@mui/x-date-pickers';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 export const StyledTimePicker = styled(TimePicker)`
     .react-time-picker {
         display: flex;
@@ -184,21 +184,21 @@ export const CoverBlockInformation = styled.div`
 `;
 export const StyledPickersLayout = styled(DesktopDatePicker)`
     .MuiOutlinedInput-root {
-             padding-top: ${rem(10)};
+        padding-top: ${rem(10)};
     }
-         .MuiInputBase-input {
-             font-size: ${rem(14)};
-             padding-top: ${rem(5)};
-             padding-bottom: ${rem(5)};
-             padding-left: ${rem(10)};
-             padding-right: ${rem(10)};
-         },
-    
+    .MuiInputBase-input {
+        font-size: ${rem(14)};
+        padding-top: ${rem(5)};
+        padding-bottom: ${rem(5)};
+        padding-left: ${rem(10)};
+        padding-right: ${rem(10)};
+    }
+
+    ,
     .MuiOutlinedInput-root {
-    align-items: center;
-    display: flex;
+        align-items: center;
+        display: flex;
     }
-    
 `;
 
 export const StyledTimePickerMain = styled(TimePicker)`

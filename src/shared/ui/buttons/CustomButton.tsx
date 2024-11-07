@@ -1,6 +1,6 @@
 import React from 'react';
 import { HomeTypesButton, TabsIdsType } from '../../../pages/home/types/HomeTypes';
-import {BtnAddTask, BtnOpenTasks, BtnPickData, BtnPopup} from './styled/styledButtons';
+import { BtnAddTask, BtnOpenTasks, BtnPickData, BtnPopup } from './styled/styledButtons';
 
 interface ICustomButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode | string;
@@ -42,7 +42,7 @@ const CustomButton = ({
     if (indicator === HomeTypesButton.addTask) {
         return (
             <>
-                <BtnAddTask disabled={disabled ? !disabled : false} variant="contained" onClick={() => onClickTask()} type={type}>
+                <BtnAddTask disabled={disabled ? !disabled : false} variant='contained' onClick={() => onClickTask()} type={type}>
                     {children}
                 </BtnAddTask>
             </>

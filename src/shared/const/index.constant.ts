@@ -33,6 +33,3 @@ export const COUNT_VALUES_IN_TASK = [
     { id: 2, title: 'Короткое описание', placeholder: 'Короткое описание', textArea: false },
     { id: 3, title: 'Описание задачи', placeholder: 'Описание задачи', textArea: true },
 ];
-
-
-

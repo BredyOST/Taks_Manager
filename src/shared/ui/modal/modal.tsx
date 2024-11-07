@@ -1,24 +1,21 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { ContentModal, StyledSvgClose, WrapperModal } from './styled/modalStyled';
 import CustomButton from '../buttons/CustomButton';
 import { HomeTypesButton } from '../../../pages/home/types/HomeTypes';
-import {useClosePopups} from "../../hooks/hooks";
-import {useAppSelector} from "../../../app/redux/hooks/hooks";
+import { useClosePopups } from '../../hooks/hooks';
+import { useAppSelector } from '../../../app/redux/hooks/hooks';
 
 interface IModal {
     children: React.ReactNode;
-    isActive:boolean
+    isActive: boolean;
 }
 
-const Modal = ({isActive, children }: IModal) => {
-
-    const {isCloseModalAddTask} = useAppSelector(state => state.additionalIndicators)
-    const closePopups = useClosePopups()
+const Modal = ({ isActive, children }: IModal) => {
+    const { isCloseModalAddTask } = useAppSelector((state) => state.additionalIndicators);
+    const closePopups = useClosePopups();
 
     return (
-        <WrapperModal
-            $isVisible={!isCloseModalAddTask}
-        >
+        <WrapperModal $isVisible={!isCloseModalAddTask}>
             <ContentModal>
                 <CustomButton
                     type='button'

@@ -21,7 +21,7 @@ export const TaskWrapper = styled.div`
     padding-top: ${rem(15)};
 `;
 export const TaskNoItems = styled.div`
-  font-size: ${rem(18)};
+    font-size: ${rem(18)};
     font-weight: 600;
     background-color: antiquewhite;
     border: 2px solid rgba(27, 8, 8, 0.08);
@@ -52,42 +52,42 @@ export const TaskCoverButton = styled.button`
 `;
 
 export const TaskCard = styled.div`
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
 `;
 
 export const TaskTitle = styled.h3`
-  font-size: ${rem(18)};
-  font-weight: 600;
-  color: #333;
-  margin-bottom: ${rem(10)};
+    font-size: ${rem(18)};
+    font-weight: 600;
+    color: #333;
+    margin-bottom: ${rem(10)};
 `;
 
 export const TaskSubtitle = styled.p`
-  font-size: ${rem(16)};
-  color: #555;
-  margin-bottom: ${rem(15)};
+    font-size: ${rem(16)};
+    color: #555;
+    margin-bottom: ${rem(15)};
     flex: 1 1 auto;
 `;
 
 export const TaskInfo = styled.div`
-  font-size: ${rem(14)};
-  color: #777;
+    font-size: ${rem(14)};
+    color: #777;
     margin-bottom: ${rem(15)};
 `;
 
 export const TaskData = styled.div`
-  margin-bottom:${rem(5)};
-
+    margin-bottom: ${rem(5)};
 `;
-

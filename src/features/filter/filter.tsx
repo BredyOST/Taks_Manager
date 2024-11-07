@@ -1,5 +1,5 @@
 import React from 'react';
-import {FilterWrapper} from './styled/filterStyled';
+import { FilterWrapper } from './styled/filterStyled';
 import CustomInput from '../../shared/ui/inputs/customInput';
 import { FilterIndicatorHome, HomeTypesButton } from '../../pages/home/types/HomeTypes';
 import { useDispatch } from 'react-redux';

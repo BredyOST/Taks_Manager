@@ -1,13 +1,10 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { rem } from '../../../../app/styles/common';
 import SvgClose from './../.././../../assets/svg/closeCycle.svg';
-
 
 interface ModalWrapper {
     $isVisible: boolean;
 }
-
-
 
 const fadeIn = keyframes`
   0% {
@@ -34,7 +31,7 @@ export const WrapperModal = styled.div<ModalWrapper>`
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.42);
-    animation: ${(props) => props.$isVisible ? fadeIn : fadeOut} 0.3s ease-out forwards;
+    animation: ${(props) => (props.$isVisible ? fadeIn : fadeOut)} 0.3s ease-out forwards;
     transition: transform ease 0.3s 0s;
 `;
 

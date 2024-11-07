@@ -3,7 +3,7 @@ import { ITasks } from '../../../../pages/home/types/HomeTypes';
 
 export interface IAdditionalIndicators {
     activeTask: ITasks | null;
-    isClosedSideBar:boolean
+    isClosedSideBar: boolean;
     activeModalAddTask: boolean;
     isCloseModalAddTask: boolean;
 }
@@ -12,7 +12,7 @@ const initialState: IAdditionalIndicators = {
     activeTask: null,
     isClosedSideBar: false,
     activeModalAddTask: false,
-    isCloseModalAddTask:false,
+    isCloseModalAddTask: false,
 };
 
 const activeTaskSlice = createSlice({

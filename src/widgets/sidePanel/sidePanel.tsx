@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { HomeTypesButton, IndexTasks, ITasks, ITextBtnTask } from '../../pages/home/types/HomeTypes';
 import {
-    SideBarClose, SideBarControl,
-    SideBarDateCover, SideBarDateItemCover, SideBarInfo, SideBarTextItem, SideBarTitleItem,
+    SideBarClose,
+    SideBarControl,
+    SideBarDateCover,
+    SideBarDateItemCover,
+    SideBarInfo,
+    SideBarTextItem,
+    SideBarTitleItem,
     SideBarWrapper,
 } from './styled/sidepanelStyled';
 import { TasksBtnText } from '../../shared/const/index.constant';
@@ -18,16 +23,16 @@ interface ISidePanel {
 const SidePanel = ({ task }: ISidePanel) => {
     const dispatch = useAppDispatch();
     const { tasksArchived, tasksFinished, tasksActive, activeTab } = useAppSelector((state) => state.filter);
-    const {isClosedSideBar} = useAppSelector(state => state.additionalIndicators)
-    const { addActiveTask, addFinishedTask, addArchiveTask} = filterActions;
+    const { isClosedSideBar } = useAppSelector((state) => state.additionalIndicators);
+    const { addActiveTask, addFinishedTask, addArchiveTask } = filterActions;
     const { changeActiveTask, handleIndicatorIsClosedSidebar } = activeTaskSliceActions;
 
     const resetActiveTasks = () => {
-        dispatch(handleIndicatorIsClosedSidebar(true))
+        dispatch(handleIndicatorIsClosedSidebar(true));
         setTimeout(() => {
-            dispatch(handleIndicatorIsClosedSidebar(false))
-                        dispatch(changeActiveTask(null));
-                    }, 500)
+            dispatch(handleIndicatorIsClosedSidebar(false));
+            dispatch(changeActiveTask(null));
+        }, 500);
     };
 
     const sortedActiveTasks = (task: ITasks) => {
@@ -110,43 +115,43 @@ const SidePanel = ({ task }: ISidePanel) => {
                 sortedArchivedTask(task);
             }
         }
-        resetActiveTasks()
+        resetActiveTasks();
     };
 
     return (
         <SideBarWrapper $isVisible={!isClosedSideBar}>
             <SideBarControl>
-                    <SideBarClose type='button' onClick={resetActiveTasks}>
-                        <span></span>
-                    </SideBarClose>
-                    {TasksBtnText.length > 0 &&
-                        TasksBtnText.map((elem: ITextBtnTask) => {
-                            /**
-                             * @param activeTab = 2 (завершенные задачи) не отобраражаем кнопки "выполнено" и "удалить"
-                             * @param activeTab = 3 (архивные задачи) не отобраражаем кнопки "выполнено", "архив", "изменить"
-                             * */
-                            if (task.index === IndexTasks.finishedTask && (elem.id == 1 || elem.id == 2)) {
-                                return null;
-                            }
+                <SideBarClose type='button' onClick={resetActiveTasks}>
+                    <span></span>
+                </SideBarClose>
+                {TasksBtnText.length > 0 &&
+                    TasksBtnText.map((elem: ITextBtnTask) => {
+                        /**
+                         * @param activeTab = 2 (завершенные задачи) не отобраражаем кнопки "выполнено" и "удалить"
+                         * @param activeTab = 3 (архивные задачи) не отобраражаем кнопки "выполнено", "архив", "изменить"
+                         * */
+                        if (task.index === IndexTasks.finishedTask && (elem.id == 1 || elem.id == 2)) {
+                            return null;
+                        }
 
-                            if (task.index === IndexTasks.archivedTask && (elem.id == 1 || elem.id == 2 || elem.id == 4)) {
-                                return null;
-                            }
-                            return (
-                                <CustomButton
-                                    type='button'
-                                    indicator={HomeTypesButton.btnOpenTask}
-                                    isActive={false}
-                                    onClickTab={null}
-                                    activeTab={null}
-                                    key={elem.id}
-                                    onClickTask={() => changeTasks(task, elem.id)}
-                                    onClickOpenTask={null}
-                                >
-                                    {elem.text}
-                                </CustomButton>
-                            );
-                        })}
+                        if (task.index === IndexTasks.archivedTask && (elem.id == 1 || elem.id == 2 || elem.id == 4)) {
+                            return null;
+                        }
+                        return (
+                            <CustomButton
+                                type='button'
+                                indicator={HomeTypesButton.btnOpenTask}
+                                isActive={false}
+                                onClickTab={null}
+                                activeTab={null}
+                                key={elem.id}
+                                onClickTask={() => changeTasks(task, elem.id)}
+                                onClickOpenTask={null}
+                            >
+                                {elem.text}
+                            </CustomButton>
+                        );
+                    })}
             </SideBarControl>
             <SideBarInfo>
                 <SideBarTitleItem>{task.title}</SideBarTitleItem>

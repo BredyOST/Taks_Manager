@@ -1,16 +1,12 @@
 import React from 'react';
 import Task from '../ui/task/task';
 import { ITasks } from '../types/HomeTypes';
-import {TaskNoItems, TaskWrapper} from '../styled/homeStyled';
+import { TaskNoItems, TaskWrapper } from '../styled/homeStyled';
 import { useAppSelector } from '../../../app/redux/hooks/hooks';
 
-interface ITasksProps {
-
-}
-
+interface ITasksProps {}
 
 const Tasks = () => {
-
     const { activeTab, searchTasks, countTusks, tasksActive, tasksArchived, tasksFinished } = useAppSelector((state) => state.filter);
     const [sortedTasks, setSortedTasks] = React.useState<ITasks[]>([]);
 
@@ -36,12 +32,15 @@ const Tasks = () => {
         }
     }, [activeTab, searchTasks, countTusks, tasksActive, tasksArchived, tasksFinished]);
 
-
-    return <TaskWrapper>{
-        sortedTasks.length > 0
-            ? sortedTasks.map((item) => <Task item={item} key={item.id} />)
-            : <TaskNoItems>Список пуст</TaskNoItems>
-    }</TaskWrapper>;
+    return (
+        <TaskWrapper>
+            {sortedTasks.length > 0 ? (
+                sortedTasks.map((item) => <Task item={item} key={item.id} />)
+            ) : (
+                <TaskNoItems>Список пуст</TaskNoItems>
+            )}
+        </TaskWrapper>
+    );
 };
 
 export default Tasks;

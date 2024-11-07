@@ -1,16 +1,16 @@
-import React, {SetStateAction} from 'react'
-import {useDispatch} from "react-redux";
-import {activeTaskSliceActions} from "../../app/redux/slices/additionalIndicators/additionalIndicators";
+import React, { SetStateAction } from 'react';
+import { useDispatch } from 'react-redux';
+import { activeTaskSliceActions } from '../../app/redux/slices/additionalIndicators/additionalIndicators';
 
 export const useClosePopups = () => {
     const dispatch = useDispatch();
-    const { changeStateModalAddTask, handleIndicatorIsClosedModalAddTask} = activeTaskSliceActions;
+    const { changeStateModalAddTask, handleIndicatorIsClosedModalAddTask } = activeTaskSliceActions;
 
     return React.useCallback(() => {
-        dispatch(handleIndicatorIsClosedModalAddTask(true))
+        dispatch(handleIndicatorIsClosedModalAddTask(true));
         setTimeout(() => {
-            dispatch(handleIndicatorIsClosedModalAddTask(false))
-            dispatch(changeStateModalAddTask(null))
-        },400)
-    },[])
-}
+            dispatch(handleIndicatorIsClosedModalAddTask(false));
+            dispatch(changeStateModalAddTask(null));
+        }, 400);
+    }, []);
+};

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { rem } from '../../../../app/styles/common';
 import LoadingButton from '@mui/lab/LoadingButton';
-import {BUTTON_COLOR_B, BUTTON_COLOR_B_HOVER} from "../../../../app/styles/variable/globalConstant";
+import { BUTTON_COLOR_B, BUTTON_COLOR_B_HOVER } from '../../../../app/styles/variable/globalConstant';
 
 interface ITabsButton {
     $isActive?: boolean;
@@ -47,9 +47,7 @@ export const BtnOpenTasks = styled.button`
     }
 `;
 
-export const BtnAddTask = styled(LoadingButton)`
-    
-`;
+export const BtnAddTask = styled(LoadingButton)``;
 
 export const BtnPopup = styled.button``;
 

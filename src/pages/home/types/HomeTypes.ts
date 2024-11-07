@@ -53,5 +53,4 @@ export interface ITextBtnTask {
     text: string;
 }
 
-
-export type ForFuncType<T,U> =  (arg:T) => U
+export type ForFuncType<T, U> = (arg: T) => U;
