@@ -1,29 +1,38 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {ITasks} from "../../../../pages/home/types/HomeTypes";
-
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { ITasks } from '../../../../pages/home/types/HomeTypes';
 
 export interface IAdditionalIndicators {
     activeTask: ITasks | null;
-    activeModalAddTask: boolean
+    isClosedSideBar:boolean
+    activeModalAddTask: boolean;
+    isCloseModalAddTask: boolean;
 }
 
-const initialState:IAdditionalIndicators = {
+const initialState: IAdditionalIndicators = {
     activeTask: null,
+    isClosedSideBar: false,
     activeModalAddTask: false,
-}
+    isCloseModalAddTask:false,
+};
 
 const activeTaskSlice = createSlice({
-    name: "additionalIndicators",
+    name: 'additionalIndicators',
     initialState,
     reducers: {
-        changeActiveTask: (state:IAdditionalIndicators, action: PayloadAction<ITasks | null>) => {
+        changeActiveTask: (state: IAdditionalIndicators, action: PayloadAction<ITasks | null>) => {
             state.activeTask = action.payload;
         },
-        changeStateModalAddTask: (state:IAdditionalIndicators, action: PayloadAction<boolean>) => {
+        changeStateModalAddTask: (state: IAdditionalIndicators, action: PayloadAction<boolean>) => {
             state.activeModalAddTask = action.payload;
         },
-    }
-})
+        handleIndicatorIsClosedModalAddTask: (state: IAdditionalIndicators, action: PayloadAction<boolean>) => {
+            state.isCloseModalAddTask = action.payload;
+        },
+        handleIndicatorIsClosedSidebar: (state: IAdditionalIndicators, action: PayloadAction<boolean>) => {
+            state.isClosedSideBar = action.payload;
+        },
+    },
+});
 
 export default activeTaskSlice.reducer;
-export const {actions: activeTaskSliceActions} = activeTaskSlice
+export const { actions: activeTaskSliceActions } = activeTaskSlice;

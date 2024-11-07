@@ -10,8 +10,8 @@ export function em(px: number) {
     return `${px / 16}em`;
 }
 
-export function math( num:number, numTwo: number ): number {
-    return numTwo / num
+export function math(num: number, numTwo: number): number {
+    return numTwo / num;
 }
 
 export const adaptiveValue = (

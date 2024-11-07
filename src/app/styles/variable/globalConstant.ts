@@ -13,3 +13,12 @@ export const MOBILE_SMALL = 479.98; // Телефоны S
 
 // для страниц
 export const MAIN_SIZE = 16;
+
+export const TITLE_SIZE = 18;
+export const BUTTON_COLOR_B = '#1976d2';
+
+
+export const BUTTON_COLOR_B_HOVER = '#0056b3';
+
+
+

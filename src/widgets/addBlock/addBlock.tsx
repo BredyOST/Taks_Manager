@@ -1,24 +1,28 @@
-import React, {Component} from 'react';
-import {TitleAddBlock, WrapperAddBlock} from "./styled/addBlock";
-import CustomInput from "../../shared/ui/inputs/customInput";
-import {FilterIndicatorHome} from "../../pages/home/types/HomeTypes";
+import React from 'react';
+import { CoverInputAddBlock, WrapperAddBlock } from './styled/addBlock';
+import CustomInput from '../../shared/ui/inputs/customInput';
+import { FilterIndicatorHome } from '../../pages/home/types/HomeTypes';
+import TextArea from '../../shared/ui/textArea/textArea';
 
 interface IAddBlock {
-    title:string;
     indicator: FilterIndicatorHome;
     placeholder: string;
-    value: string;
-    onChange: (args:React.ChangeEvent<HTMLInputElement>) => void;
+    indicatorTextArea: boolean;
 }
+//
+// const AddBlock = ({indicator, placeholder, indicatorTextArea }: IAddBlock) => {
+//
+//     return (
+//         <WrapperAddBlock>
+//             <CoverInputAddBlock>
+//                 {/*{!indicatorTextArea && (*/}
+//                 {/*    <CustomInput type='text' indicator={indicator} placeholder={placeholder} value={value} onChange={onChange} />*/}
+//                 {/*)}*/}
+//                 {/*{indicatorTextArea && <TextArea />}*/}
+//             </CoverInputAddBlock>
+//
+//         </WrapperAddBlock>
+//     );
+// };
 
-const AddBlock = ({title, indicator, placeholder, onChange, value}:IAddBlock) =>  {
-
-        return (
-            <WrapperAddBlock>
-                <TitleAddBlock>{title}</TitleAddBlock>
-                <CustomInput type='text' indicator={indicator} placeholder={placeholder} value={value} onChange={onChange}/>
-            </WrapperAddBlock>
-        );
-}
-
-export default AddBlock;
+// export default AddBlock;

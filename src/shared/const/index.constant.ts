@@ -1,4 +1,4 @@
-import {IndexTasks, TabsHome} from '../../pages/home/types/HomeTypes';
+import { IndexTasks, TabsHome } from '../../pages/home/types/HomeTypes';
 
 /**
  * для табов
@@ -9,13 +9,12 @@ export const TEXT_FOR_TABS: TabsHome[] = [
     { id: 3, text: 'Архив' },
 ];
 
-
 export const TasksBtnText = [
     // {id:1, text: 'Изменить'},
-    {id:2, text: 'Выполнть'},
-    {id:3, text: 'Удалить'},
-    {id:4, text: 'В архив'},
-]
+    { id: 2, text: 'Выполнть' },
+    { id: 3, text: 'Удалить' },
+    { id: 4, text: 'В архив' },
+];
 
 /**
  * для селекта
@@ -30,7 +29,10 @@ export const OPTIONS_FRO_SELECT = [
  * количество полей в задаче для ее создания
  */
 export const COUNT_VALUES_IN_TASK = [
-    {id: 1, title: 'Название задачи', placeholder: 'Введите название'},
-    {id: 2, title: 'Подзаголовок', placeholder: 'Введите название'},
-    {id: 3, title: 'Описание задачи', placeholder: 'Введите название'},
-]
+    { id: 1, title: 'Название задачи', placeholder: 'Название задачи', textArea: false },
+    { id: 2, title: 'Короткое описание', placeholder: 'Короткое описание', textArea: false },
+    { id: 3, title: 'Описание задачи', placeholder: 'Описание задачи', textArea: true },
+];
+
+
+

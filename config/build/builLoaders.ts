@@ -19,7 +19,23 @@ function buildLoaders(): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     };
 
-    return [typescriptLoader, cssLoaders];
+    // SVG как React-компоненты
+    const svgLoaderReact = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    };
+
+    // SVG как URL (для CSS и фонов в Styled Components)
+    const svgLoaderUrl = {
+        test: /\.svg$/,
+        type: 'asset',
+        issuer: /\.(css|scss)$/, // Применяется только для файлов стилей
+        generator: {
+            filename: 'assets/images/[name][ext]', // Настройка пути сохранения
+        },
+    };
+
+    return [typescriptLoader, cssLoaders, svgLoaderReact, svgLoaderUrl];
 }
 
 export default buildLoaders;

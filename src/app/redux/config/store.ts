@@ -1,7 +1,7 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { IStore } from './storeType';
 import FilterSliceReducer from '../slices/filterSlice/filterSlice';
-import AdditionalIndicatorsReducer from '../slices/additionalIndicators/additionalIndicators'
+import AdditionalIndicatorsReducer from '../slices/additionalIndicators/additionalIndicators';
 
 const rootReducer: ReducersMapObject<IStore> = {
     filter: FilterSliceReducer,

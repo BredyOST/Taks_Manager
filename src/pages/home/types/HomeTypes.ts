@@ -4,13 +4,15 @@ import { TEXT_FOR_TABS } from '../../../shared/const/index.constant';
  * для отображения определенной кнопки исходя из того, что передается компоненту
  */
 export enum HomeTypesButton {
-    'tabHome' = 'tabHome',
     'btnOpenTask' = 'btnOpenTask',
     'addTask' = 'addTask',
+    'closePopup' = 'closePopup',
+    'pickData' = 'pickData',
 }
 
 export enum FilterIndicatorHome {
     'filterHome' = 'filterHome',
+    'addTaskInput' = 'addTaskInput',
 }
 
 export enum IndexTasks {
@@ -47,6 +49,9 @@ export interface ITasks {
  */
 
 export interface ITextBtnTask {
-        id:number
-        text: string
+    id: number;
+    text: string;
 }
+
+
+export type ForFuncType<T,U> =  (arg:T) => U

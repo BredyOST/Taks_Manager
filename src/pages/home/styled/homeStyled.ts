@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import {math, rem} from '../../../app/styles/common';
+import { math, rem } from '../../../app/styles/common';
 
-export const WrappedMainDiv = styled.div`
+export const HomeWrapper = styled.div`
     padding-top: ${rem(30)};
 `;
 
@@ -12,7 +12,7 @@ export const CoverTabs = styled.div`
     border-bottom: 1px solid rgba(27, 8, 8, 0.08);
 `;
 
-export const CoverMainTask = styled.div`
+export const TaskWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: auto;
@@ -20,8 +20,17 @@ export const CoverMainTask = styled.div`
     row-gap: ${rem(10)};
     padding-top: ${rem(15)};
 `;
-
-export const CoverSelect = styled.div``;
+export const TaskNoItems = styled.div`
+  font-size: ${rem(18)};
+    font-weight: 600;
+    background-color: antiquewhite;
+    border: 2px solid rgba(27, 8, 8, 0.08);
+    padding-top: ${rem(5)};
+    padding-bottom: ${rem(5)};
+    padding-left: ${rem(8)};
+    padding-right: ${rem(8)};
+    border-radius: ${rem(5)};
+`;
 
 export const SelectCover = styled.select``;
 
@@ -42,43 +51,43 @@ export const TaskCoverButton = styled.button`
     }
 `;
 
-export const TaskCoverTextAndTitle = styled.div`
+export const TaskCard = styled.div`
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    padding-top: ${rem(10)};
-`;
-export const TaskCoverHead = styled.div`
-    display: flex;    
-    flex-direction: column;
-    min-width: 100%;
-    row-gap: ${rem(10)};
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const TaskTitle = styled.h3`
-    font-weight: 600;
-    text-align: center;
-    font-size: ${rem(18)};
-    line-height: ${math(18, 26)};
-`;
-export const TextTask = styled.div`
-    font-weight: 400;
-    font-size: ${rem(16)};
-    line-height: ${math(16, 20)};
-    text-align: left;
+  font-size: ${rem(18)};
+  font-weight: 600;
+  color: #333;
+  margin-bottom: ${rem(10)};
 `;
 
-export const DataTask = styled.div`
-    font-weight: 400;
-    font-size: ${rem(16)};
-    line-height: ${math(16, 20)};
-    display: flex;
-    column-gap: ${rem(10)};
+export const TaskSubtitle = styled.p`
+  font-size: ${rem(16)};
+  color: #555;
+  margin-bottom: ${rem(15)};
+    flex: 1 1 auto;
 `;
 
-export const DataTitle = styled.div`
-    font-weight: 400;
-    font-size: ${rem(16)};
-    line-height: ${math(16, 20)};
+export const TaskInfo = styled.div`
+  font-size: ${rem(14)};
+  color: #777;
+    margin-bottom: ${rem(15)};
 `;
 
+export const TaskData = styled.div`
+  margin-bottom:${rem(5)};
+
+`;
 

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { rem } from '../../../../app/styles/common';
+import LoadingButton from '@mui/lab/LoadingButton';
+import {BUTTON_COLOR_B, BUTTON_COLOR_B_HOVER} from "../../../../app/styles/variable/globalConstant";
 
 interface ITabsButton {
     $isActive?: boolean;
@@ -30,35 +32,29 @@ export const TabsButton = styled.button<ITabsButton>`
     }
 `;
 
-
-export const BtnTasks = styled.button`
-    font-family: 'Tinos';
-    outline: none;
-    padding-top: ${rem(10)};
-    padding-bottom: ${rem(10)};
-    padding-left: ${rem(15)};
-    padding-right: ${rem(15)};
-    border-radius: ${rem(18)};
-    background-color: #e6eff3;
-
+export const BtnOpenTasks = styled.button`
+    background-color: ${BUTTON_COLOR_B};
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color ease 0.3s 0s;
     &:hover {
-        background-color: #a2bac5;;
+        background-color: ${BUTTON_COLOR_B_HOVER};
         transition: background-color ease 0.3s 0s;
     }
 `;
 
-export const BtnAddTask = styled.button`
-    font-family: 'Tinos';
-    outline: none;
-    padding-top: ${rem(10)};
-    padding-bottom: ${rem(10)};
-    padding-left: ${rem(15)};
-    padding-right: ${rem(15)};
-    border-radius: ${rem(18)};
-    background-color: #e6eff3;
+export const BtnAddTask = styled(LoadingButton)`
+    
+`;
 
-    &:hover {
-        background-color: #a2bac5;;
-        transition: background-color ease 0.3s 0s;
-    }
+export const BtnPopup = styled.button``;
+
+export const BtnPickData = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;

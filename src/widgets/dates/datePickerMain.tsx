@@ -1,33 +1,27 @@
 import React from 'react';
-import {Locale} from "date-fns/locale/types";
-import {LocalizationProvider} from "@mui/x-date-pickers";
-import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFnsV3";
-import {DemoContainer} from "@mui/x-date-pickers/internals/demo";
+import {LocalizationProvider} from '@mui/x-date-pickers';
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
+import {Dayjs} from "dayjs";
+import {StyledPickersLayout} from "./styled/dateStyled";
 
 interface IDatePickerProps {
-    onDayClick: (arg: Date | null) => void;
-    locale: Locale
-    selectedDays: Date | Date[]
-    month: Date
+    onClickDay: (arg: Dayjs) => void;
+    selectedDays:  Dayjs;
 }
 
-const DatePickerMain = ({ onDayClick, selectedDays, month, locale }: IDatePickerProps) => {
-    const [value, setValue] = React.useState<Date | null>(new Date());
+const DatePickerMain = ({ onClickDay, selectedDays }: IDatePickerProps) => {
 
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DemoContainer components={['DatePicker', 'DatePicker', 'DatePicker']}>
-                <DatePicker
-                    label={'"year", "month" and "day"'}
-                    views={['year', 'month', 'day']}
-                />
-                <DatePicker label={'"day"'} views={['day']} />
-                <DatePicker label={'"month" and "year"'} views={['month', 'year']} />
-            </DemoContainer>
+            <StyledPickersLayout
+                label="Срок завершения задачи"
+                value={selectedDays}
+                onChange={(newValue) => onClickDay(newValue)}
+            />
         </LocalizationProvider>
     );
+
     // <StyledDayPicker locale={locale} month={month} selected={selectedDays} onDayClick={onDayClick} />;
 };
 
-export default DatePicker;
+export default DatePickerMain;
